@@ -25,6 +25,9 @@
 ##  SUCH DAMAGE.
 ## 
 
+
+{.passL: "-lmagic -L/usr/local/lib".}
+
 const
   MAGIC_NONE* = 0x00000000
   MAGIC_DEBUG* = 0x00000001

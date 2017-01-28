@@ -5,8 +5,6 @@ import parseopt2
 # importing translated header
 import "magic.nim"
 
-{.passL: "-lmagic -L/usr/local/lib".}
-
 # ===========
 # Entry Point
 # ===========
