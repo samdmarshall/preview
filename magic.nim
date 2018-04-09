@@ -26,7 +26,7 @@
 ## 
 
 
-{.passL: "-lmagic -L/usr/local/lib".}
+{.passL: "-lmagic -L/usr/lib".}
 
 const
   MAGIC_NONE* = 0x00000000
@@ -77,21 +77,21 @@ const
 type
   magic_t* = ptr object
 
-proc magic_open*(a2: cint): magic_t                                                     {.header: "/usr/local/include/magic.h", importc.}
-proc magic_close*(a2: magic_t)                                                          {.header: "/usr/local/include/magic.h", importc.}
-proc magic_getpath*(a2: cstring; a3: cint): cstring                                     {.header: "/usr/local/include/magic.h", importc.}
-proc magic_file*(a2: magic_t; a3: cstring): cstring                                     {.header: "/usr/local/include/magic.h", importc.}
-proc magic_descriptor*(a2: magic_t; a3: cint): cstring                                  {.header: "/usr/local/include/magic.h", importc.}
-proc magic_buffer*(a2: magic_t; a3: pointer; a4: csize): cstring                        {.header: "/usr/local/include/magic.h", importc.}
-proc magic_error*(a2: magic_t): cstring                                                 {.header: "/usr/local/include/magic.h", importc.}
-proc magic_setflags*(a2: magic_t; a3: cint): cint                                       {.header: "/usr/local/include/magic.h", importc.}
-proc magic_version*(): cint                                                             {.header: "/usr/local/include/magic.h", importc.}
-proc magic_load*(a2: magic_t; a3: cstring): cint                                        {.header: "/usr/local/include/magic.h", importc.}
-proc magic_load_buffers*(a2: magic_t; a3: ptr pointer; a4: ptr csize; a5: csize): cint  {.header: "/usr/local/include/magic.h", importc.}
-proc magic_compile*(a2: magic_t; a3: cstring): cint                                     {.header: "/usr/local/include/magic.h", importc.}
-proc magic_check*(a2: magic_t; a3: cstring): cint                                       {.header: "/usr/local/include/magic.h", importc.}
-proc magic_list*(a2: magic_t; a3: cstring): cint                                        {.header: "/usr/local/include/magic.h", importc.}
-proc magic_errno*(a2: magic_t): cint                                                    {.header: "/usr/local/include/magic.h", importc.}
+proc magic_open*(a2: cint): magic_t                                                     {.header: "/usr/include/magic.h", importc.}
+proc magic_close*(a2: magic_t)                                                          {.header: "/usr/include/magic.h", importc.}
+proc magic_getpath*(a2: cstring; a3: cint): cstring                                     {.header: "/usr/include/magic.h", importc.}
+proc magic_file*(a2: magic_t; a3: cstring): cstring                                     {.header: "/usr/include/magic.h", importc.}
+proc magic_descriptor*(a2: magic_t; a3: cint): cstring                                  {.header: "/usr/include/magic.h", importc.}
+proc magic_buffer*(a2: magic_t; a3: pointer; a4: csize): cstring                        {.header: "/usr/include/magic.h", importc.}
+proc magic_error*(a2: magic_t): cstring                                                 {.header: "/usr/include/magic.h", importc.}
+proc magic_setflags*(a2: magic_t; a3: cint): cint                                       {.header: "/usr/include/magic.h", importc.}
+proc magic_version*(): cint                                                             {.header: "/usr/include/magic.h", importc.}
+proc magic_load*(a2: magic_t; a3: cstring): cint                                        {.header: "/usr/include/magic.h", importc.}
+proc magic_load_buffers*(a2: magic_t; a3: ptr pointer; a4: ptr csize; a5: csize): cint  {.header: "/usr/include/magic.h", importc.}
+proc magic_compile*(a2: magic_t; a3: cstring): cint                                     {.header: "/usr/include/magic.h", importc.}
+proc magic_check*(a2: magic_t; a3: cstring): cint                                       {.header: "/usr/include/magic.h", importc.}
+proc magic_list*(a2: magic_t; a3: cstring): cint                                        {.header: "/usr/include/magic.h", importc.}
+proc magic_errno*(a2: magic_t): cint                                                    {.header: "/usr/include/magic.h", importc.}
 
 const
   MAGIC_PARAM_INDIR_MAX* = 0
@@ -102,5 +102,5 @@ const
   MAGIC_PARAM_REGEX_MAX* = 5
   MAGIC_PARAM_BYTES_MAX* = 6
 
-proc magic_setparam*(a2: magic_t; a3: cint; a4: pointer): cint                          {.header: "/usr/local/include/magic.h", importc.}
-proc magic_getparam*(a2: magic_t; a3: cint; a4: pointer): cint                          {.header: "/usr/local/include/magic.h", importc.}
+proc magic_setparam*(a2: magic_t; a3: cint; a4: pointer): cint                          {.header: "/usr/include/magic.h", importc.}
+proc magic_getparam*(a2: magic_t; a3: cint; a4: pointer): cint                          {.header: "/usr/include/magic.h", importc.}
